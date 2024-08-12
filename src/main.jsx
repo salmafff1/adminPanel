@@ -14,9 +14,11 @@ import App from './App';
 import { Dashboard } from "./pages/dashboard/Dashboard";
 import { Partners} from "./pages/partners/Partners";
 import Form from './pages/form/Form';
-
-
-
+import  Calendar  from './pages/calendar/Calendar'
+import Barchart from './pages/barchart/Barchart';
+import Piechart from './pages/piechart/Piechart';
+import Geography from './pages/geography/Geography';
+import Cooptation from './pages/cooptation/Cooptation';
 
 
 
@@ -26,13 +28,13 @@ const router = createBrowserRouter(
       <Route path='/' element={<App />}>
       <Route index element={<Dashboard />} />
       <Route path='partners' element={<Partners/>} />
+      <Route path='cooptation' element={<Cooptation/>} />
       <Route path='form' element={<Form />} />
-      {/*<Route path='/calendar' element={< Calendar/>} />}
-      {<Route path='/faq' element={<Faq />} />}
-      {<Route path='/bar' element={<Bar />} />}
-      {<Route path='/pie' element={<Pie/>} />}
-      {<Route path='/line' element={<Line />} />}
-      {<Route path='/geography' element={<Geography />} />}  */} 
+      <Route path='calendar' element={<Calendar />} />
+      {<Route path='/bar' element={<Barchart />} />}
+      {<Route path='/pie' element={<Piechart/>} />}
+      {<Route path='/geography' element={<Geography/>} />}
+  
     </Route>
   )
 );

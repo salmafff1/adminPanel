@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled, createTheme, ThemeProvider, CssBaseline, Box,  } from '@mui/material';
+import { styled, createTheme, ThemeProvider, CssBaseline, Box} from '@mui/material';
 import TopBar from './components/TopBar';
 import SideBar from './components/SideBar';
 import { getDesignTokens } from './theme'; // Assuming this is correctly imported

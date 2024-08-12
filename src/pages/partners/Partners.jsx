@@ -8,7 +8,7 @@ import { columns , rows} from "./Data";
 export const Partners = (props) => {
   return (
   
-    <div style={{ height: 600, width: '100%' }}>
+    <div style={{ height: 450, width: '100%' }}>
     <DataGrid rows={rows} columns={columns} />
   </div>
   );

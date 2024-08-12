@@ -62,4 +62,7 @@ export const columns = [
   { field: 'address', headerName: 'Address', flex: 1 },
   { field: 'description', headerName: 'Description', flex: 1 },
   { field: 'website', headerName: 'Website', flex: 1 },
+  { field: 'website', headerName: 'Website', flex: 1 },
+  { field: 'website', headerName: 'Website', flex: 1 },
+  { field: 'website', headerName: 'Website', flex: 1 },
 ];

@@ -11,12 +11,13 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import { styled } from '@mui/material/styles';
-import { BarChartOutlined, CalendarTodayOutlined, ContactsOutlined, HelpOutlineOutlined, HomeOutlined, MapOutlined, PeopleOutlineOutlined, PersonOutlined, PieChartOutlineOutlined, ReceiptOutlined, TimerOutlined } from '@mui/icons-material';
-import { Avatar, Typography } from '@mui/material';
+import { BarChartOutlined, CalendarTodayOutlined, ContactsOutlined , HomeOutlined, MapOutlined, PeopleOutlineOutlined, PersonOutlined, PieChartOutlineOutlined, ReceiptOutlined, TimerOutlined } from '@mui/icons-material';
+import { Avatar, colors, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import { grey } from '@mui/material/colors';
+import { grey, orange } from '@mui/material/colors';
 
-const drawerWidth = 240;
+
+const drawerWidth = 239;
 
 const openedMixin = (theme) => ({
   width: drawerWidth,
@@ -32,7 +33,7 @@ const closedMixin = (theme) => ({
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),
-  overflowX: 'hidden',
+  overflowX: 'hiddn',
   width: `calc(${theme.spacing(7)} + 1px)`,
   [theme.breakpoints.up('sm')]: {
     width: `calc(${theme.spacing(8)} + 1px)`,
@@ -40,6 +41,7 @@ const closedMixin = (theme) => ({
 });
 
 const DrawerHeader = styled('div')(({ theme }) => ({
+  
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'flex-end',
@@ -67,23 +69,22 @@ const StyledDrawer = styled(Drawer, { shouldForwardProp: (prop) => prop !== 'ope
 
 
 const Array1 = [
-  {text: "Dashboard", icon: <HomeOutlined />,path: "/"},
- 
+  {text: "Dashboard", icon: <HomeOutlined />  ,path: "/"},
+   {text: "Partners", icon: <PeopleOutlineOutlined />,path: "/partners"},
 
 ];
 
 const Array2 = [
-  {text: "Partners", icon: <PeopleOutlineOutlined />,path: "/partners"},
+  {text: "Cooptation", icon: <  ContactsOutlined  />,path: "/Cooptation"},
   {text: "Profile Form", icon: < PersonOutlined />,path: "/Form"},
   {text: "Calendar", icon: < CalendarTodayOutlined />,path: "/Calendar"},
-  {text: "FAQ", icon: <HelpOutlineOutlined/>,path: "/Faq"}
+ 
 ];
 
 const Array3 = [
   {text: "Bar Chart", icon: <  BarChartOutlined />,path: "/bar"},
   {text: "Pie Chart", icon: <PieChartOutlineOutlined />,path: "/pie"},
-  {text: "Line Chart",icon: <TimerOutlined/>,path: "/lines"},
-  {text: "Geography Chart",icon: <MapOutlined/>,path: "/geography"}
+  {text: "Geography", icon: <MapOutlined />,path: "/geography"},
 ];
 
 
@@ -155,6 +156,8 @@ const SideBar = ({ open, handleDrawerClose }) => {
               minHeight: 48,
               justifyContent: open ? 'initial' : 'center',
               px: 2.5,
+              bgcolor: location.pathname === item.path ? (theme.palette.mode === "dark" ? grey[400] : grey[100]) : null,
+
             }}
           
             >
@@ -186,8 +189,9 @@ const SideBar = ({ open, handleDrawerClose }) => {
               minHeight: 48,
               justifyContent: open ? 'initial' : 'center',
               px: 2.5,
+              bgcolor: location.pathname === item.path ? (theme.palette.mode === "dark" ? grey[400] : grey[100]) : null,
+
             }}
-          
             >
               <ListItemIcon
                 sx={{
